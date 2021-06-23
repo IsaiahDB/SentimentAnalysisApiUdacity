@@ -24,5 +24,7 @@ export function handleSubmit(event) {
             }
         )
 
+    } else {
+        alert("Wrong Url")
     }
 };
