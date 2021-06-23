@@ -35,5 +35,18 @@ app.get('/test', function (req, res) {
      res.send(mockAPIResponse) 
 })
 
+app.post('/postData', async(request, response) => {
+    const rightdata = request.body.url;
+    const articleAnalysis = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${rightdata}&lang=en`, 
+    { method: 'POST' })
+    try {
+        const data = await articleAnalysis.json();
+        console.log(data)
+        res.send(data);
+    }catch(err) {
+        console.log(err)
+    }
+})
+
 
 
