@@ -5,11 +5,11 @@ export function handleSubmit(event) {
     let articleUrl = document.getElementById('name').value 
 
     if(Client.urlChecker(articleUrl)) {
-        fetch('localhost:8081/postData', {
+        fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {'Content-Type': 'application/json'},
-            body: json.stringify({articleUrl: articleUrl})
+            body: JSON.stringify({articleUrl: articleUrl})
         })
         .then(res => {
             res.json()
