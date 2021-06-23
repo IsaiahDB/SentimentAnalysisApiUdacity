@@ -1,11 +1,10 @@
-import { urlChecker } from './checkUrl'
 
 export function handleSubmit(event) {
     event.preventDefault()
 
     let articleUrl = document.getElementById('name').value 
 
-    if(urlChecker(articleUrl)) {
+    if(Client.urlChecker(articleUrl)) {
         fetch('localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
