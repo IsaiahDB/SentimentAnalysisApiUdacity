@@ -1,7 +1,5 @@
 const dotenv = require("dotenv")
 dotenv.config()
-
-var path = require('path')
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const nodeFetch = require('node-fetch')
@@ -23,7 +21,6 @@ app.use(express.static('dist'))
 console.log(__dirname)
 
 const appiKey = process.env.API_KEY
-console.log(`Your API key is ${appiKey}`)
 
 app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
