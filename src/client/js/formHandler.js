@@ -1,3 +1,4 @@
+import { urlChecker } from './js/checkUrl'
 
 export function handleSubmit(event) {
     event.preventDefault()
