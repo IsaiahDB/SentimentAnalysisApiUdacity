@@ -8,7 +8,7 @@ export function handleSubmit(event) {
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
-            headers: {'Content-Type': 'application/json'},
+            headers: {'Content-Type': 'application/json',},
             body: JSON.stringify({articleUrl: articleUrl})
         })
         .then(res => {
