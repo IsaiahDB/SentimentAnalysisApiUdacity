@@ -5,7 +5,7 @@ export function handleSubmit(event) {
 
     let articleUrl = document.getElementById('name').value 
 
-    if(urlChecker(url)) {
+    if(urlChecker(articleUrl)) {
         fetch('localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
