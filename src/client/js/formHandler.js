@@ -9,7 +9,7 @@ export function handleSubmit(event) {
             method: 'POST',
             credentials: 'same-origin',
             headers: {'Content-Type': 'application/json'},
-            body: json.stringify({articleUrl})
+            body: json.stringify({articleUrl: articleUrl})
         })
         .then(res => {
             res.json()
