@@ -39,15 +39,4 @@ app.get('/test', function (req, res) {
 })
 
 
-app.post('/process', async (req, res) => {
-    const article = req.body.url;
-    const articleResults = await fetch(`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${article}&lang=en`, { method: 'POST' });
-    try {
-        const data = await articleResults.json();
-        console.log(data)
-        res.send(data);
-    } catch (error) {
-        console.log("error",error)
-    }
-});
 
