@@ -42,7 +42,7 @@ app.post('/postData', async(request, response) => {
     try {
         const data = await articleAnalysis.json();
         console.log(data)
-        res.send(data);
+        response.send(data);
     }catch(err) {
         console.log(err)
     }
