@@ -15,7 +15,7 @@ export function handleSubmit(event) {
             res.json()
         })
         .then(function (res) {
-                document.getElementById('model').innerHTML = 'Model: ' + res.model;
+                // document.getElementById('model').innerHTML = 'Model: ' + res.model;
                 document.getElementById('score_tag').innerHTML = 'Score: ' + res.score_tag;
                 document.getElementById('agreement').innerHTML = 'Agreement: ' + res.agreement;
                 document.getElementById('subjectivity').innerHTML = 'Subjectivity: ' + res.subjectivity;
