@@ -15,11 +15,11 @@ export function handleSubmit(event) {
         .then(res => res.json())
         .then(res => {
             document.getElementById('model').innerHTML = `Model: ${res.model}`;
-            document.getElementById('score_tag').innerHTML = `Score: ${res.score_tag}`;
-            document.getElementById('agreement').innerHTML = `Agreement: ${res.agreement}`;
-            document.getElementById('subjectivity').innerHTML = `Subjectivity: ${res.subjectivity}`;
-            document.getElementById('confidence').innerHTML = `Confidence:  ${res.confidence}`;
-            document.getElementById('irony').innerHTML = `Irony: ${res.irony}`;
+            document.getElementById('score_tag').innerHTML = `Score Tag: ${res.score_tag}`;
+            document.getElementById('agreement').innerHTML = `Agreement Score: ${res.agreement}`;
+            document.getElementById('subjectivity').innerHTML = `Subjectivity Score: ${res.subjectivity}`;
+            document.getElementById('confidence').innerHTML = `Confidence Score:  ${res.confidence}`;
+            document.getElementById('irony').innerHTML = `Irony Status: ${res.irony}`;
         })
 
 
