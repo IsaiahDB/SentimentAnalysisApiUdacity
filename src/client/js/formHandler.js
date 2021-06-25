@@ -5,7 +5,7 @@ export function ArticleAnalysisBtn(clickbtn) {
     clickbtn.preventDefault()
     let inputTextBox = document.getElementById('name').value 
 
-    if(Client.ArticleAnalysisBtn(inputTextBox)) {
+    if(Client.urlChecker(inputTextBox)) {
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
