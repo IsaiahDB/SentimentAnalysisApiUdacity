@@ -3,6 +3,7 @@ dotenv.config()
 const express = require('express')
 const mockAPIResponse = require('./mockAPI.js')
 const nodeFetch = require('node-fetch')
+const axios = require('axios')
 const path = require("path")
 
 
@@ -35,7 +36,7 @@ app.get('/test', function (req, res) {
 })
 
 app.post('/postData', async(request, response) => {
-    const articleAnalysis = await nodeFetch(`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`)
+    const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`))
     try {
         const apiData = await articleAnalysis.json();
         console.log(apiData)
