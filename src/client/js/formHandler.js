@@ -1,8 +1,8 @@
 
 
-export function ArticleAnalysisBtn(clickbtn) {
+export function handleSubmit(event) {
 
-    clickbtn.preventDefault()
+    event.preventDefault()
     let inputTextUrl = document.getElementById('name').value 
 
     if(Client.urlChecker(inputTextUrl)) {

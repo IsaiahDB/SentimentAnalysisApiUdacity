@@ -4,6 +4,7 @@ const express = require('express')
 const nodeFetch = require('node-fetch')
 const axios = require('axios')
 const path = require("path")
+const mockAPIResponse = require('./mockAPI.js')
 
 
 const app = express()
@@ -28,7 +29,10 @@ app.get('/', function (req, res) {
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
+})
 
+app.get('/test', function (req, res) {
+    res.send(mockAPIResponse)
 })
 
 app.post('/postData', async(request, response) => {

@@ -1,9 +1,9 @@
 import { urlChecker } from './js/checkUrl'
-import { ArticleAnalysisBtn } from './js/formHandler'
+import { handleSubmit } from './js/formHandler'
 
 export {
     urlChecker,
-    ArticleAnalysisBtn
+    handleSubmit
 }
 import './styles/resets.scss';
 import './styles/base.scss';

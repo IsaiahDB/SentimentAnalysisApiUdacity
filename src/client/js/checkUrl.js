@@ -3,7 +3,7 @@ export const urlChecker = (articleUrl) => {
     if (!articleLink.test(articleUrl)){
         console.log("Enter Url with HTTPS or HTTP") 
     } else {
-        return true 
+        return 1
     }
 }
 
