@@ -37,9 +37,9 @@ app.get('/test', function (req, res) {
 app.post('/postData', async(request, response) => {
     const articleAnalysis = await nodeFetch(`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`)
     try {
-        const data = await articleAnalysis.json();
-        console.log(data)
-        response.send(data);
+        const apiData = await articleAnalysis.json();
+        console.log(apiData)
+        response.send(apiData);
     }catch(err) {
         console.log(err)
     }
