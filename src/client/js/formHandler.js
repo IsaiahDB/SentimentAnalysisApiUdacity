@@ -1,8 +1,8 @@
 //import { request, response } from "express"
 
-export function ArticleAnalysisBtn(clickbtn) {
+export function ArticleAnalysisBtn(e) {
 
-    clickbtn.preventDefault()
+    e.preventDefault()
     let inputTextBox = document.getElementById('name').value 
 
     if(Client.urlChecker(inputTextBox)) {
