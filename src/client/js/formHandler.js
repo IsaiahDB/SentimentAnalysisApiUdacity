@@ -2,9 +2,8 @@
 
 export function ArticleAnalysisBtn(clickbtn) {
 
-    //clickbtn.preventDefault()
+    clickbtn.preventDefault()
     let formText = document.getElementById('name').value 
-    //const dataForm = {formText}
 
     if(Client.urlChecker(formText)) {
         fetch('http://localhost:8081/postData', {
