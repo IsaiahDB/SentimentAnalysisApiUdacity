@@ -3,14 +3,14 @@
 export function ArticleAnalysisBtn(clickbtn) {
 
     clickbtn.preventDefault()
-    let formText = document.getElementById('name').value 
+    let inputTextBox = document.getElementById('name').value 
 
-    if(Client.urlChecker(formText)) {
+    if(Client.urlChecker(inputTextBox)) {
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {'Content-Type': 'application/json',},
-            body: JSON.stringify({formText: formText})
+            body: JSON.stringify({inputTextBox: inputTextBox})
         })
         .then(res => res.json())
         .then(res => {

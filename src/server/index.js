@@ -1,7 +1,6 @@
 const dotenv = require("dotenv")
 dotenv.config()
 const express = require('express')
-const mockAPIResponse = require('./mockAPI.js')
 const nodeFetch = require('node-fetch')
 const axios = require('axios')
 const path = require("path")
