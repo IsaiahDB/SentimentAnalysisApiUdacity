@@ -1,16 +1,16 @@
 
 
-export function ArticleAnalysisBtn(event) {
+export function ArticleAnalysisBtn(clickbtn) {
 
-    event.preventDefault()
-    let formText = document.getElementById('name').value 
+    clickbtn.preventDefault()
+    let inputTextUrl = document.getElementById('name').value 
 
-    if(Client.urlChecker(formText)) {
+    if(Client.urlChecker(inputTextUrl)) {
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {'Content-Type': 'application/json',},
-            body: JSON.stringify({formText: formText})
+            body: JSON.stringify({inputTextUrl: inputTextUrl})
         })
         .then(res => res.json())
         .then(res => {

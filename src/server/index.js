@@ -32,7 +32,7 @@ app.listen(8081, function () {
 })
 
 app.post('/postData', async(request, response) => {
-    const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`))
+    const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.inputTextUrl}&lang=en`))
     try {
         const apiData = await articleAnalysis.json();
         console.log(apiData)
