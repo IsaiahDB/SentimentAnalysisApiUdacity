@@ -1,7 +1,7 @@
 //import { request, response } from "express"
 
-export function handleSubmit(event) {
-    event.preventDefault()
+export function handleSubmit(clickbtn) {
+    clickbtn.preventDefault
 
     let formText = document.getElementById('name').value 
     //const dataForm = {formText}

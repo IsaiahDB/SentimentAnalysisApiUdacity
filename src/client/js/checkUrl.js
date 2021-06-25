@@ -1,9 +1,12 @@
 export const urlChecker = (articleUrl) => {
-    let check = articleUrl.match(/^(ftp|http|https):\/\/[^ "]+$/);
-    if (check === null){
-        alert("Enter a website with http:// or https://")
+    //const articleLink = articleUrl.match(/^(ftp|http|https):\/\/[^ "]+$/);
+    let articleLink = new RegExp("http(s?):\/\/");
+    if (articleUrl == articleUrl.match(articleLink)){
+        return true
     } else {
-    return true }
+        console.log("Enter Url with HTTPS or HTTP") 
+        alert("Enter Url with HTTPS or HTTP")
+    }
 }
 
 
