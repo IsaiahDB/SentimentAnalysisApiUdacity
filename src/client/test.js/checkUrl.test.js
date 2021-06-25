@@ -1,5 +1,4 @@
 
-
 import { urlChecker } from '../js/checkUrl'
 
 test('This test should return true', () => {
