@@ -1,8 +1,8 @@
 //import { request, response } from "express"
 
-export function handleSubmit(clickbtn) {
-    clickbtn.preventDefault
+export function ArticleAnalysisBtn(clickbtn) {
 
+    //clickbtn.preventDefault()
     let formText = document.getElementById('name').value 
     //const dataForm = {formText}
 
