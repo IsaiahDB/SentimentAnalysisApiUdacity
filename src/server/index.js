@@ -31,10 +31,6 @@ app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
 
-app.get('/test', function (req, res) {
-     res.send(mockAPIResponse) 
-})
-
 app.post('/postData', async(request, response) => {
     const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`))
     try {
