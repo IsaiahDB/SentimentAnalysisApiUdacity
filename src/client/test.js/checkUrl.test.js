@@ -1,5 +1,4 @@
 
-//const urlChecker = require('../js/checkUrl');
 
 import { urlChecker } from '../js/checkUrl'
 
