@@ -28,11 +28,11 @@ app.get('/', function (req, res) {
 // designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
-    
+
 })
 
 app.post('/postData', async(request, response) => {
-    const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.inputTextBox}&lang=en`))
+    const articleAnalysis = await nodeFetch((`https://api.meaningcloud.com/sentiment-2.1?key=${appiKey}&url=${request.body.formText}&lang=en`))
     try {
         const apiData = await articleAnalysis.json();
         console.log(apiData)

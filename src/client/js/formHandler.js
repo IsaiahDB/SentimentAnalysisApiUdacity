@@ -1,16 +1,16 @@
-//import { request, response } from "express"
+
 
 export function ArticleAnalysisBtn(event) {
 
     event.preventDefault()
-    let inputTextBox = document.getElementById('name').value 
+    let formText = document.getElementById('name').value 
 
-    if(Client.urlChecker(inputTextBox)) {
+    if(Client.urlChecker(formText)) {
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {'Content-Type': 'application/json',},
-            body: JSON.stringify({inputTextBox: inputTextBox})
+            body: JSON.stringify({formText: formText})
         })
         .then(res => res.json())
         .then(res => {
