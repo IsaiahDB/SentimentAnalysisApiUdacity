@@ -6,6 +6,7 @@ export function handleSubmit(event) {
     let inputTextUrl = document.getElementById('name').value 
 
     if(Client.urlChecker(inputTextUrl)) {
+        console.log('API Called Correctly')
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
@@ -22,8 +23,10 @@ export function handleSubmit(event) {
             document.getElementById('irony').innerHTML = `Irony Status: ${res.irony}`;
         })
 
+        
+
 
     } else {
-        alert("Wrong Url")
+        alert("Wrong URL")
     }
 };
