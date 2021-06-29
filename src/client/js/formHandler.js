@@ -1,12 +1,12 @@
 
 
 export function handleSubmit(event) {
-
+    
     event.preventDefault()
     let inputTextUrl = document.getElementById('name').value 
 
     if(Client.urlChecker(inputTextUrl)) {
-        console.log('API Called Correctly')
+        console.log("API")
         fetch('http://localhost:8081/postData', {
             method: 'POST',
             credentials: 'same-origin',
