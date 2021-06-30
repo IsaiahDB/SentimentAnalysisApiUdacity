@@ -1,6 +1,6 @@
 # Sentiment Analysis API Web App 
 
-This web app should determine if a piece of text is positive, negative, or neutral.  
+This web app should determine if a piece of text in any language is positive, negative, or neutral.  
 
 ## File Description 
  * Webpack is included in this project
